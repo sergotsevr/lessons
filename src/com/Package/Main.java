@@ -1,3 +1,5 @@
+package com.Package;
+
 import java.time.Clock;
 import java.time.Instant;
 import java.time.LocalDate;
@@ -16,7 +18,7 @@ class somth{
 public class Main {
 
     public static void main(String []args) {
-      /* Converter<String, Integer> convert= (a)->Integer.parseInt(a);
+      /* com.Package.Converter<String, Integer> convert= (a)->Integer.parseInt(a);
         System.out.println(convert.convert("54"));*/
         StringBuilder str=new StringBuilder("Bla-Bla");
         str.append("-Blo");

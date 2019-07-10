@@ -1,3 +1,4 @@
+package com.Package;
 import java.io.Serializable;
 
 public class OperationType implements Serializable {
