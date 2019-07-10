@@ -21,26 +21,24 @@ class somth{
 public class Main {
 
     public static void main(String []args) {
+
         OperationType first = new OperationType(1,1, "Name1",1);
         OperationType second = new OperationType(2,2, "Name2",2);
         OperationType third = new OperationType(3,3, "Name3",3);
-        SerializeServiceImpl ser = new SerializeServiceImpl("C\\save.txt");
+        SerializeServiceImpl ser = new SerializeServiceImpl("C:\\save.txt");
 
         try {
-            ser.serializeOperationType(first);
+            ser.serializeOperationType(third);
+            OperationType firstDes = ser.deserializeOperationType();
+            firstDes.getPrintString();
         }
         catch (IOException e)
         {
             e.printStackTrace();
-        }
-        try {
-            OperationType firstDes = ser.deserializeOperationType();
-           firstDes.getPrintString();
-        } catch (IOException e) {
-            e.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+
     }
 
 }

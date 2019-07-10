@@ -11,6 +11,7 @@ public class OperationType implements Serializable {
         this.id=id;
         this.operationTypeName = operationTypeName;
         this.operTypeCode = operTypeCode;
+        this.operTypeNumber=operTypeNumber;
     }
     public Integer getOperTypeNumber() {
         return operTypeNumber;
@@ -20,7 +21,7 @@ public class OperationType implements Serializable {
         this.operTypeNumber = operTypeNumber;
     }
     protected void getPrintString(){
-        System.out.println("id="+this.id+"  operTypeNumber"+this.operTypeNumber);
+        System.out.println("id="+this.id+"  operTypeNumber="+this.operTypeNumber);
     }
 
 

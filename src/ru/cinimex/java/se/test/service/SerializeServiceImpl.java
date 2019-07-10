@@ -11,7 +11,10 @@ private String typesFileUrl;
     }
     @Override
     public void serializeOperationType (OperationType operationType) throws IOException {
+
+        System.out.println(typesFileUrl);
         FileOutputStream outputStream = new FileOutputStream(typesFileUrl);
+
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
         objectOutputStream.writeObject(operationType);
         objectOutputStream.close();
@@ -19,7 +22,7 @@ private String typesFileUrl;
 
     @Override
     public OperationType deserializeOperationType() throws IOException, ClassNotFoundException {
-        FileInputStream fileInputStream = new FileInputStream("C:\\Users\\Username\\Desktop\\save.ser");
+        FileInputStream fileInputStream = new FileInputStream(typesFileUrl);
         ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
 
         OperationType operationType = (OperationType) objectInputStream.readObject();
