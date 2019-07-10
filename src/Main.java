@@ -30,4 +30,5 @@ public class Main {
         System.out.println( str3.startsWith("Blo"));
         System.out.println("Получилосьв идее");
     }
+
 }
