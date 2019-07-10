@@ -1,5 +1,8 @@
 package com.Package;
 
+import ru.cinimex.java.se.test.service.SerializeServiceImpl;
+
+import java.io.IOException;
 import java.time.Clock;
 import java.time.Instant;
 import java.time.LocalDate;
@@ -18,19 +21,26 @@ class somth{
 public class Main {
 
     public static void main(String []args) {
-      /* com.Package.Converter<String, Integer> convert= (a)->Integer.parseInt(a);
-        System.out.println(convert.convert("54"));*/
-        StringBuilder str=new StringBuilder("Bla-Bla");
-        str.append("-Blo");
-        str.insert(0, "Blo-");
-        System.out.println(str);
-        str.reverse();
-        System.out.println(str);
-        StringBuffer str2 = new StringBuffer(str);
-        System.out.println(str2.reverse());
-        String str3 = new String(str2);
-        System.out.println( str3.startsWith("Blo"));
-        System.out.println("Получилосьв идее");
+        OperationType first = new OperationType(1,1, "Name1",1);
+        OperationType second = new OperationType(2,2, "Name2",2);
+        OperationType third = new OperationType(3,3, "Name3",3);
+        SerializeServiceImpl ser = new SerializeServiceImpl("C\\save.txt");
+
+        try {
+            ser.serializeOperationType(first);
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        try {
+            OperationType firstDes = ser.deserializeOperationType();
+           firstDes.getPrintString();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
 }
