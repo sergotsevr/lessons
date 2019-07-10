@@ -30,7 +30,7 @@ public class Main {
         try {
             ser.serializeOperationType(third);
             OperationType firstDes = ser.deserializeOperationType();
-            firstDes.getPrintString();
+            firstDes.getInfo();
         }
         catch (IOException e)
         {

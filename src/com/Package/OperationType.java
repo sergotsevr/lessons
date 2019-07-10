@@ -23,7 +23,10 @@ public class OperationType implements Serializable {
     protected void getPrintString(){
         System.out.println("id="+this.id+"  operTypeNumber="+this.operTypeNumber);
     }
-
+    protected void getInfo()
+    {
+        System.out.println("id="+this.id+" operationTypeName="+this.operationTypeName+" operTypeCode="+this.operTypeCode);
+    }
 
 
 }
