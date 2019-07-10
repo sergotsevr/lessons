@@ -28,5 +28,6 @@ public class Main {
         System.out.println(str2.reverse());
         String str3 = new String(str2);
         System.out.println( str3.startsWith("Blo"));
+        System.out.println("Получилосьв идее");
     }
 }
